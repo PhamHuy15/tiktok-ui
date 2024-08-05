@@ -47,7 +47,6 @@ function Menu({
             offset={[10, 10]}
             interactive
             placement="bottom-end"
-            onHidden={() => setHistory((prev) => prev.slice(0, 1))}
             hideOnClick={hideOnClick}
             render={(attrs) => (
                 <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
@@ -62,10 +61,11 @@ function Menu({
                                 }}
                             />
                         )}
-                        {renderItem()}
+                        <div className={cx('menu-body')}>{renderItem()}</div>
                     </PopperWrapper>
                 </div>
             )}
+            onHidden={() => setHistory((prev) => prev.slice(0, 1))}
         >
             {children}
         </Tippy>

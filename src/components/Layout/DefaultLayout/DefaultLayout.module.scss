@@ -7,10 +7,10 @@
 .container {
     display: flex;
     width: var(--layout-default-width);
-    min-height: 1000px;
+    padding: 0 var(--layout-default-horizontal-spacer);
+    margin-top: var(--layout-default-header-height);
 }
 
 .content {
     flex: 1;
-    min-height: 1000px;
 }
