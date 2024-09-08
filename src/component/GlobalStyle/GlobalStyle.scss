@@ -1,5 +1,16 @@
 @import 'normalize.css';
 
+:root {
+    --primary: #ff0000;
+    --black: #000;
+    --white: #fff;
+    --text-color: #111;
+
+    //default layout
+    --default-layout-header-width: 1492px;
+    --defaule-layout-header-height: 60px;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -13,6 +24,18 @@ html {
 body {
     font-family: 'TikTokFont';
     font-size: 1.6rem;
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+
+a[href] {
+    color: var(--text-color);
+    text-decoration: none;
 }
 
 //font emberder

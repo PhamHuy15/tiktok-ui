@@ -1,0 +1,95 @@
+.wrapper {
+    --search-border-radius: 92px;
+    --search-height: 46px;
+    --search-top-spacer: 9px;
+    --search-button-width: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: var(--default-layout-header-height, 60px);
+    background-color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px;
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: var(--default-layout-header-width);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+//search
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 500px;
+    height: var(--search-height);
+    padding-left: 16px;
+    background-color: #f1f1f2;
+    border: 1px solid transparent;
+    border-radius: 92px;
+
+    input {
+        flex: 1;
+        height: 40px;
+        font-size: 1.6rem;
+        caret-color: var(--primary);
+        color: var(--black);
+        background-color: transparent;
+    }
+
+    input:not(:placeholder-shown) ~ .search-btn {
+        color: rgba(22, 24, 35, 1);
+    }
+    &::after {
+        position: absolute;
+        content: '';
+        top: var(--search-top-spacer);
+        right: var(--search-button-width);
+        height: calc(var(--search-height) - var(--search-top-spacer) * 2);
+        width: 1px;
+        background-color: rgba(22, 24, 35, 0.12);
+    }
+
+    &:focus-within {
+        border: 1px solid rgba(22, 24, 35, 0.2);
+    }
+
+    &:hover {
+        border: 1px solid rgba(22, 24, 35, 0.2);
+    }
+
+    &:hover .search-btn {
+        color: rgba(22, 24, 35, 1);
+        background-color: rgba(22, 24, 35, 0.06);
+    }
+}
+
+.clear,
+.loadding {
+    position: absolute;
+    right: var(--search-button-width);
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 12px;
+    color: rgba(22, 24, 35, 0.34);
+}
+
+.search-btn {
+    width: var(--search-button-width);
+    height: 100%;
+    font-size: 2rem;
+    color: rgba(22, 24, 35, 0.34);
+    border: 1px solid transparent;
+    border-top-right-radius: 92px;
+    border-bottom-right-radius: 92px;
+}
