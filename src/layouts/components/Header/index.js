@@ -12,9 +12,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <div className={cx('logo')}>
-                    <img src={images.logo} alt="TikTok" />
-                </div>
+                <img src={images.logo} alt="TikTok" />
 
                 <div className={cx('search')}>
                     <input placeholder="Tìm kiếm" spellCheck={false} />
