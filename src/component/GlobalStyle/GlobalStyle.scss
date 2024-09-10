@@ -46,6 +46,24 @@ a[href] {
 }
 
 @font-face {
+    font-family: TikTokDisplayFont;
+    src: url('/assets/font/TikTokDisplayFont-Bold.woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: TikTokDisplayFont;
+    src: url('/assets/font/TikTokDisplayFont-Semibold.woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: TikTokFont;
+    src: url('/assets/font/TikTokFont-Regular.woff2');
+    font-weight: 400;
+}
+
+@font-face {
     font-family: TikTokFont;
     src: url('/assets/font/TikTokFont-Semibold.woff2');
     font-weight: 600;
@@ -53,6 +71,6 @@ a[href] {
 
 @font-face {
     font-family: TikTokFont;
-    src: url('/assets/font/TikTokFont-Regular.woff2');
-    font-weight: 400;
+    src: url('/assets/font/TikTokFont-Bold.woff2');
+    font-weight: 700;
 }
