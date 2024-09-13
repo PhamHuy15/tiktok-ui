@@ -1,12 +1,13 @@
 .wrapper {
+    font-family: TikTokDisplayFont;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-family: TikTokDisplayFont;
     font-size: 1.6rem;
     font-weight: 700;
     padding: 9px 16px;
     min-width: 110px;
+    background-color: transparent;
     border-radius: 2px;
     border: 1px solid transparent;
     user-select: none;
@@ -19,6 +20,11 @@
 .icon + .title,
 .title + .icon {
     margin-left: 8px;
+}
+
+.icon {
+    display: inline-block;
+    width: 20px;
 }
 
 //button types

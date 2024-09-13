@@ -1,0 +1,21 @@
+//menu wrapper
+.menu-list {
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 8px 0px;
+    min-width: 224px;
+}
+
+.menu-popper {
+    padding-bottom: 8px;
+}
+
+//menu item
+.menu-item {
+    width: 100%;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}

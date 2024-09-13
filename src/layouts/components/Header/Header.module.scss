@@ -103,3 +103,17 @@
 }
 
 //action
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+.message-btn,
+.more-btn {
+    margin-left: 16px;
+    background-color: transparent;
+}
+
+.more-btn {
+    padding: 4px;
+}
