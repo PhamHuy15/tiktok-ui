@@ -1,12 +1,13 @@
 .wrapper {
-    font-family: TikTokDisplayFont;
+    font-family: TikTokFont;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     font-size: 1.6rem;
-    font-weight: 700;
-    padding: 9px 16px;
+    font-weight: 600;
+    padding: 7px 13px;
     min-width: 110px;
+    line-height: 2.1rem;
     background-color: transparent;
     border-radius: 2px;
     border: 1px solid transparent;
@@ -41,9 +42,12 @@
 }
 
 .primary {
+    font-weight: 700;
     color: var(--white);
     background-color: var(--primary);
     border-color: var(--primary);
+    border-radius: 4px;
+    min-width: 100px;
 
     &:hover {
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), rgb(254, 44, 85);
@@ -51,6 +55,7 @@
 }
 
 .outline {
+    font-weight: 700;
     color: var(--primary);
     background-color: var(--white);
     border-color: currentColor;

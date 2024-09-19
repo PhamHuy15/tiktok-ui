@@ -4,7 +4,7 @@
     --primary: #ff0000;
     --black: #000;
     --white: #fff;
-    --text-color: #111;
+    --text-color: #161823;
 
     //default layout
     --default-layout-header-width: 1492px;
@@ -73,4 +73,25 @@ a[href] {
     font-family: TikTokFont;
     src: url('/assets/font/TikTokFont-Bold.woff2');
     font-weight: 700;
+}
+
+// custom tippy tooltip
+body {
+    .tippy-box {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 21px;
+        color: rgb(255, 255, 255);
+        background-color: rgba(84, 84, 84, 0.92);
+        border-radius: 8px;
+    }
+
+    .tippy-box[data-placement^='bottom'] > .tippy-arrow:before {
+        top: -8px;
+        color: rgba(84, 84, 84, 0.92);
+    }
+
+    .tippy-content {
+        padding: 8px 9px;
+    }
 }
