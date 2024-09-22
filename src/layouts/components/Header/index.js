@@ -26,6 +26,7 @@ import {
     LogoutIcon,
 } from '~/component/Icons';
 import Menu from '~/component/Popper/Menu';
+import Image from '~/component/Image/Image';
 
 const cx = classNames.bind(styles);
 
@@ -158,10 +159,11 @@ function Header() {
 
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
                                 alt="nguyen van a"
                                 src="https://p16-sign-sg.tiktokcdn.com/aweme/720x720/tos-alisg-avt-0068/d26f9433e7d89fd6ff58117c86eebe35.jpeg?lk3s=a5d48078&nonce=45793&refresh_token=3411ee49f9089a9559965ba4252487c4&x-expires=1726923600&x-signature=4duMggBM0RfkAhQk6RFN9mb0%2Fi4%3D&shp=a5d48078&shcp=81f88b70"
+                                fallback="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/b3b79cc75b44259afe38076048bc71c5.jpeg?lk3s=a5d48078&nonce=40217&refresh_token=518e61f46447870e40a8b31002189dcd&x-expires=1727168400&x-signature=3nHzbmigAG2NbAxGAwV4lGf6eLw%3D&shp=a5d48078&shcp=81f88b70"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
