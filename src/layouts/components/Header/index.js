@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-import HeadlessTippy from '@tippyjs/react/headless';
 import Tippy from '@tippyjs/react/';
 import 'tippy.js/dist/tippy.css';
 
@@ -7,15 +5,12 @@ import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faSpinner, faMagnifyingGlass, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 import images from '~/assets/images';
-import { Wrapper as PopperWrapper } from '~/component/Popper';
-import AccountItems from '~/component/AccountItems';
 import Button from '~/component/Button';
 import {
     MessageIcon,
-    SearchIcon,
     MoreIcon,
     CreatorHouseIcon,
     LanguageIcon,
@@ -27,6 +22,7 @@ import {
 } from '~/component/Icons';
 import Menu from '~/component/Popper/Menu';
 import Image from '~/component/Image/Image';
+import Search from '../Search/Search';
 
 const cx = classNames.bind(styles);
 
@@ -58,15 +54,7 @@ const MENU_ITEMS = [
 ];
 
 function Header() {
-    const [searchResults, setSearchResuls] = useState([]);
-
     const currentUser = true;
-
-    useEffect(() => {
-        setTimeout(() => {
-            setSearchResuls([1, , 2, 3]);
-        }, 0);
-    }, []);
 
     const handleMenuChange = (menuItem) => {
         switch (menuItem.type) {
@@ -104,35 +92,7 @@ function Header() {
             <div className={cx('inner')}>
                 <img src={images.logo} alt="TikTok" />
 
-                <HeadlessTippy
-                    visible={searchResults.length > 0}
-                    interactive={true}
-                    render={(attrs) => (
-                        <div className={cx('search-result')} tabIndex="-1" {...attrs}>
-                            <PopperWrapper>
-                                <h4 className={cx('search-title')}>Accounts</h4>
-
-                                <AccountItems />
-                                <AccountItems />
-                                <AccountItems />
-                            </PopperWrapper>
-                        </div>
-                    )}
-                >
-                    <div className={cx('search')}>
-                        <input placeholder="Tìm kiếm" spellCheck={false} />
-
-                        <button className={cx('clear')}>
-                            <FontAwesomeIcon icon={faCircleXmark} />
-                        </button>
-
-                        <FontAwesomeIcon className={cx('loadding')} icon={faSpinner} />
-
-                        <button className={cx('search-btn')}>
-                            <SearchIcon />
-                        </button>
-                    </div>
-                </HeadlessTippy>
+                <Search />
 
                 <div className={cx('actions')}>
                     {currentUser ? (
@@ -163,7 +123,7 @@ function Header() {
                                 className={cx('user-avatar')}
                                 alt="nguyen van a"
                                 src="https://p16-sign-sg.tiktokcdn.com/aweme/720x720/tos-alisg-avt-0068/d26f9433e7d89fd6ff58117c86eebe35.jpeg?lk3s=a5d48078&nonce=45793&refresh_token=3411ee49f9089a9559965ba4252487c4&x-expires=1726923600&x-signature=4duMggBM0RfkAhQk6RFN9mb0%2Fi4%3D&shp=a5d48078&shcp=81f88b70"
-                                fallback="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/b3b79cc75b44259afe38076048bc71c5.jpeg?lk3s=a5d48078&nonce=40217&refresh_token=518e61f46447870e40a8b31002189dcd&x-expires=1727168400&x-signature=3nHzbmigAG2NbAxGAwV4lGf6eLw%3D&shp=a5d48078&shcp=81f88b70"
+                                // fallback="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/b3b79cc75b44259afe38076048bc71c5.jpeg?lk3s=a5d48078&nonce=40217&refresh_token=518e61f46447870e40a8b31002189dcd&x-expires=1727168400&x-signature=3nHzbmigAG2NbAxGAwV4lGf6eLw%3D&shp=a5d48078&shcp=81f88b70"
                             />
                         ) : (
                             <button className={cx('more-btn')}>

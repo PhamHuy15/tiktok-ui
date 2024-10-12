@@ -30,6 +30,10 @@ const publickRoute = [
         component: Search,
         layout: null,
     },
+    {
+        path: '/:nickname',
+        component: Profile,
+    },
 ];
 
 const privateRouter = [];
