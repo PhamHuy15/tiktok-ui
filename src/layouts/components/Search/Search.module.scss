@@ -17,7 +17,9 @@
     input {
         flex: 1;
         height: 40px;
+        font-family: var(--font-family);
         font-size: 1.6rem;
+        font-weight: 400;
         caret-color: var(--primary);
         color: var(--black);
         background-color: transparent;
