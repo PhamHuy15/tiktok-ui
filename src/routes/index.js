@@ -1,5 +1,5 @@
 //router config
-import routesConfig from '~/config/routes';
+import config from '~/config';
 
 //layout
 import { HeaderOnly } from '~/layouts';
@@ -13,24 +13,24 @@ import Search from '~/pages/Search';
 //publickRoute
 const publickRoute = [
     {
-        path: routesConfig.home,
+        path: config.routes.home,
         component: Home,
     },
     {
-        path: routesConfig.following,
+        path: config.routes.following,
         component: Following,
     },
     {
-        path: routesConfig.profile,
+        path: config.routes.profile,
         component: Profile,
     },
     {
-        path: routesConfig.upload,
+        path: config.routes.upload,
         component: Upload,
         layout: HeaderOnly,
     },
     {
-        path: routesConfig.search,
+        path: config.routes.search,
         component: Search,
         layout: null,
     },
