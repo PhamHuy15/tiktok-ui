@@ -1,1 +1,1 @@
-export { publickRoute, privateRouter } from './routes';
+export * from './routes';
